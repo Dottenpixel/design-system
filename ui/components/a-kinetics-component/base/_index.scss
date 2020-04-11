@@ -1,0 +1,112 @@
+// Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+// Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
+/**
+ * @summary Create a-kinetics-component component
+ *
+ * @name base
+ * @selector .slds-a-kinetics-component
+ * @restrict span
+ * @support dev-ready
+ * @variant
+ */
+.slds-a-kinetics-component {
+  background-color: $color-background-dark;
+  padding: $spacing-xx-small $spacing-x-small;
+  border-radius: $border-radius-pill;
+  font-size: $font-size-2;
+  font-weight: $font-weight-bold;
+  line-height: normal;
+  color: $color-text-default;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+
+  + .slds-a-kinetics-component {
+    margin-left: $spacing-x-small;
+  }
+
+  &:empty {
+    padding: 0;
+  }
+}
+
+/**
+ * @summary Change a-kinetics-component color to a dark with light text
+ * @name inverse
+ * @selector .slds-a-kinetics-component_inverse
+ * @restrict .slds-a-kinetics-component
+ * @modifier
+ * @group color
+ */
+.slds-a-kinetics-component_inverse {
+  background-color: $a-kinetics-component-color-background-inverse;
+  color: $color-text-inverse;
+}
+
+/**
+ * @summary Change a-kinetics-component color to white with normal text
+ * @name lightest
+ * @selector .slds-a-kinetics-component_lightest
+ * @restrict .slds-a-kinetics-component
+ * @modifier
+ * @group color
+ */
+.slds-a-kinetics-component_lightest {
+  border: $border-width-thin solid $color-border;
+  background-color: $a-kinetics-component-color-background-lightest;
+  font-size: $font-size-2;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/**
+ * @summary Adds an icon to a-kinetics-component
+ * @name icon-container
+ * @selector .slds-a-kinetics-component__icon
+ * @restrict .slds-a-kinetics-component span
+ * @modifier
+ */
+.slds-a-kinetics-component__icon {
+  color: $color-text-icon-default;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+
+  /**
+   * @summary Change a-kinetics-component icon fill color to inverse
+   * @name icon-inverse
+   * @selector .slds-a-kinetics-component__icon_inverse
+   * @restrict .slds-a-kinetics-component__icon
+   * @modifier
+   * @group color
+   */
+  &.slds-a-kinetics-component__icon_inverse {
+    color: currentColor;
+  }
+}
+
+/**
+ * @summary Adds an icon to the left of the a-kinetics-component text
+ * @name icon-left
+ * @selector .slds-a-kinetics-component__icon_left
+ * @restrict .slds-a-kinetics-component__icon
+ * @modifier
+ * @group spacing
+ */
+.slds-a-kinetics-component__icon_left {
+  margin-right: $spacing-xx-small;
+}
+
+/**
+ * @summary Adds an icon to the right of the a-kinetics-component text
+ * @name icon-right
+ * @selector .slds-a-kinetics-component__icon_right
+ * @restrict .slds-a-kinetics-component__icon
+ * @modifier
+ * @group spacing
+ */
+.slds-a-kinetics-component__icon_right {
+  margin-left: $spacing-xx-small;
+}
