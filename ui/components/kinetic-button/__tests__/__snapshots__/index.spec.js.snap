@@ -2,7 +2,7 @@
 
 exports[`KineticButton colors renders a default kinetic-button 1`] = `
 <span
-  className="slds-kinetic-button"
+  className="slds-button_kinetic"
 >
   Lovely kinetic-button
 </span>
@@ -10,7 +10,7 @@ exports[`KineticButton colors renders a default kinetic-button 1`] = `
 
 exports[`KineticButton colors renders an inverse kinetic-button 1`] = `
 <span
-  className="slds-kinetic-button slds-kinetic-button_inverse"
+  className="slds-button_kinetic slds-button_kinetic_inverse"
 >
   Lovely kinetic-button
 </span>
@@ -18,7 +18,7 @@ exports[`KineticButton colors renders an inverse kinetic-button 1`] = `
 
 exports[`KineticButton colors renders kinetic-button 1`] = `
 <span
-  className="slds-kinetic-button slds-kinetic-button_lightest"
+  className="slds-button_kinetic slds-button_kinetic_lightest"
 >
   Light
 </span>
@@ -26,10 +26,10 @@ exports[`KineticButton colors renders kinetic-button 1`] = `
 
 exports[`KineticButton with icons renders kinetic-button with icon only 1`] = `
 <span
-  className="slds-kinetic-button slds-kinetic-button_lightest"
+  className="slds-button_kinetic slds-button_kinetic_lightest"
 >
   <span
-    className="slds-kinetic-button__icon slds-kinetic-button__icon_left"
+    className="slds-button_kinetic__icon slds-button_kinetic__icon_left"
   >
     <span
       className="slds-icon_container slds-icon-utility-world slds-current-color"
@@ -55,10 +55,10 @@ exports[`KineticButton with icons renders kinetic-button with icon only 1`] = `
 
 exports[`KineticButton with icons renders kinetic-button with left icon 1`] = `
 <span
-  className="slds-kinetic-button slds-kinetic-button_lightest"
+  className="slds-button_kinetic slds-button_kinetic_lightest"
 >
   <span
-    className="slds-kinetic-button__icon slds-kinetic-button__icon_left"
+    className="slds-button_kinetic__icon slds-button_kinetic__icon_left"
   >
     <span
       className="slds-icon_container slds-icon-utility-world slds-current-color"
@@ -80,11 +80,11 @@ exports[`KineticButton with icons renders kinetic-button with left icon 1`] = `
 
 exports[`KineticButton with icons renders kinetic-button with right icon 1`] = `
 <span
-  className="slds-kinetic-button slds-kinetic-button_lightest"
+  className="slds-button_kinetic slds-button_kinetic_lightest"
 >
   Icon on the right
   <span
-    className="slds-kinetic-button__icon slds-kinetic-button__icon_left"
+    className="slds-button_kinetic__icon slds-button_kinetic__icon_left"
   >
     <span
       className="slds-icon_container slds-icon-utility-world slds-current-color"
@@ -105,7 +105,7 @@ exports[`KineticButton with icons renders kinetic-button with right icon 1`] = `
 
 exports[`KineticButton with icons renders deprecated kinetic-button with icon only 1`] = `
 <span
-  className="slds-kinetic-button slds-kinetic-button_lightest"
+  className="slds-button_kinetic slds-button_kinetic_lightest"
 >
   <span
     className="slds-icon_container slds-icon-utility-world"
@@ -130,7 +130,7 @@ exports[`KineticButton with icons renders deprecated kinetic-button with icon on
 
 exports[`KineticButton with icons renders deprecated kinetic-button with right icon 1`] = `
 <span
-  className="slds-kinetic-button slds-kinetic-button_lightest"
+  className="slds-button_kinetic slds-button_kinetic_lightest"
 >
   Icon on the right
   <span

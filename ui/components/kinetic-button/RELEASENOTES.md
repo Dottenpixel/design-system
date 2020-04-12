@@ -19,11 +19,11 @@
 ### Added
 
 - Examples for all color variants with left and right aligned placement.
-- Wrapping `slds-kinetic-button__icon` element to position and color icons.
+- Wrapping `slds-button_kinetic__icon` element to position and color icons.
 
 ### Changed
 
-- Increased font size to 12px, applied bold font weight, and removed uppercase styling in `.slds-kinetic-button`.
+- Increased font size to 12px, applied bold font weight, and removed uppercase styling in `.slds-button_kinetic`.
 
 ## 2.7.0
 

@@ -1,112 +1,130 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
+$bezier-curve: cubic-bezier(0.35, 0.01, 0.62, 0.99);
+$duration: 0.5s;
+$stop-color-1: #0007d2;
+$stop-color-2: #0070d2;
+
+.slds-kinetic-border-swirl {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  top: var(--border-swirl-top, -1px);
+  left: var(--border-swirl-left, -1px);
+  height: var(--border-swirl-height, 100%);
+  width: var(--border-swirl-width, 100%);
+}
+
 /**
  * @summary Create kinetic-button component
  *
  * @name base
- * @selector .slds-kinetic-button
+ * @selector .slds-button_kinetic
  * @restrict span
  * @support dev-ready
  * @variant
  */
-.slds-kinetic-button {
-  background-color: $color-background-dark;
-  padding: $spacing-xx-small $spacing-x-small;
-  border-radius: $border-radius-pill;
-  font-size: $font-size-2;
-  font-weight: $font-weight-bold;
-  line-height: normal;
-  color: $color-text-default;
-  white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
+.slds-button_kinetic {
+  --border-swirl-gradient-url: url(#slds-button_kinetic-gradient);
+  --border-swirl-top: -1px;
+  --border-swirl-left: -1px;
+  --border-swirl-height: 106%;
+  --border-swirl-width: 103%;
+  position: relative;
+  top: 0;
+  outline: none;
+  cursor: pointer;
+  border: solid 1px #dddbda;
+  border-radius: 4px;
+  transition: 0.25s transform $bezier-curve;
+  transition-delay: 0.15s;
+  transform: scale(1);
 
-  + .slds-kinetic-button {
-    margin-left: $spacing-x-small;
+  .slds-button_kinetic_label {
+    transition: 0.1s ease-out;
+    transition-property: color, transform;
+    transform: scale(1);
+    text-align: center;
+    display: block;
   }
 
-  &:empty {
-    padding: 0;
+  &:hover,
+  &.focus-visible {
+    color: unset;
+    background-color: unset;
+    border: solid 1px #dddbda;
+
+    .slds-button_kinetic_label {
+      color: #002ad2;
+    }
   }
-}
+  &:active {
+    .slds-button_kinetic_label {
+      transform: scale(0.95);
+    }
+  }
+  &.focus-visible {
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 0px 2px #0070d2;
+  }
 
-/**
- * @summary Change kinetic-button color to a dark with light text
- * @name inverse
- * @selector .slds-kinetic-button_inverse
- * @restrict .slds-kinetic-button
- * @modifier
- * @group color
- */
-.slds-kinetic-button_inverse {
-  background-color: $kinetic-button-color-background-inverse;
-  color: $color-text-inverse;
-}
-
-/**
- * @summary Change kinetic-button color to white with normal text
- * @name lightest
- * @selector .slds-kinetic-button_lightest
- * @restrict .slds-kinetic-button
- * @modifier
- * @group color
- */
-.slds-kinetic-button_lightest {
-  border: $border-width-thin solid $color-border;
-  background-color: $kinetic-button-color-background-lightest;
-  font-size: $font-size-2;
-  text-transform: none;
-  letter-spacing: normal;
-}
-
-/**
- * @summary Adds an icon to kinetic-button
- * @name icon-container
- * @selector .slds-kinetic-button__icon
- * @restrict .slds-kinetic-button span
- * @modifier
- */
-.slds-kinetic-button__icon {
-  color: $color-text-icon-default;
-  vertical-align: middle;
-  display: inline-flex;
-  align-items: center;
-  line-height: 1;
-
-  /**
-   * @summary Change kinetic-button icon fill color to inverse
-   * @name icon-inverse
-   * @selector .slds-kinetic-button__icon_inverse
-   * @restrict .slds-kinetic-button__icon
-   * @modifier
-   * @group color
-   */
-  &.slds-kinetic-button__icon_inverse {
-    color: currentColor;
+  .slds-kinetic-border-swirl {
+    border-radius: 4px;
   }
 }
 
-/**
- * @summary Adds an icon to the left of the kinetic-button text
- * @name icon-left
- * @selector .slds-kinetic-button__icon_left
- * @restrict .slds-kinetic-button__icon
- * @modifier
- * @group spacing
- */
-.slds-kinetic-button__icon_left {
-  margin-right: $spacing-xx-small;
+.slds-kinetic-border-swirl-shape {
+  fill: none;
+  stroke: var(--border-swirl-gradient-url, url(#border-swirl-gradient));
+  stroke-width: 1;
+  stroke-dasharray: 0, var(--border-swirl-dasharray-space-start, 310);
+  transition: $duration $bezier-curve;
+  transition-property: stroke-width, stroke-dasharray;
 }
 
-/**
- * @summary Adds an icon to the right of the kinetic-button text
- * @name icon-right
- * @selector .slds-kinetic-button__icon_right
- * @restrict .slds-kinetic-button__icon
- * @modifier
- * @group spacing
- */
-.slds-kinetic-button__icon_right {
-  margin-left: $spacing-xx-small;
+.slds-kinetic-gradient__stop-1 {
+  stop-color: var(--border-swirl-stop-color-1, $stop-color-1);
+}
+
+.slds-kinetic-gradient__stop-2 {
+  stop-color: var(--border-swirl-stop-color-2, $stop-color-2);
+}
+
+.slds-button_kinetic:active {
+  .slds-kinetic-border-swirl-shape {
+    stroke-width: 5;
+    transition: stroke-width 0.1s $bezier-curve;
+  }
+}
+
+.slds-button_kinetic:hover,
+.slds-kinetic-progress__item_activated {
+  .slds-kinetic-border-swirl-shape {
+    stroke-width: 3;
+    stroke-dasharray: var(--border-swirl-dasharray-dash-end, 450), 0;
+  }
+}
+
+.slds-button_kinetic.focus-visible {
+  .slds-kinetic-border-swirl {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.slds-button_kinetic:not(:active) {
+  .slds-kinetic-border-swirl-shape {
+    transition: stroke-width 0.1s $bezier-curve,
+      stroke-dasharray $duration $bezier-curve;
+  }
+}
+
+.slds-button_kinetic:not(:hover) {
+  .slds-kinetic-border-swirl-shape {
+    transition: stroke-width $duration $bezier-curve,
+      stroke-dasharray $duration $bezier-curve;
+  }
 }

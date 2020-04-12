@@ -95,6 +95,9 @@
 ## Release 2.11.5 - March 5, 2020
 
 ## Components
+### [AKineticsComponent](https://www.lightningdesignsystem.com/components/a-kinetics-component)
+- Added examples for communicating Success, Warning and Error states.
+
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Changed
 - Replaced `slds-truncate` with specific selector `slds-accordion__summary-content` in Accordion title so content will only truncate for larger screens.
@@ -109,6 +112,9 @@
 ### [Checkbox Button Group](https://www.lightningdesignsystem.com/components/checkbox-button-group)
 #### Added
 - Added documentation and examples for mobile/touch context
+
+### [KineticButton](https://www.lightningdesignsystem.com/components/kinetic-button)
+- Added examples for communicating Success, Warning and Error states.
 
 ### [Path](https://www.lightningdesignsystem.com/components/path)
 #### Added
@@ -231,6 +237,10 @@
   - `PALETTE_GRAY_13`: `#080707`
 
 ## Components
+### [AKineticsComponent](https://www.lightningdesignsystem.com/components/a-kinetics-component)
+#### Changed
+- Added `display: inline-flex` and `align-items: center` to a-kinetics-component to center content vertically
+
 ### [Badges](https://www.lightningdesignsystem.com/components/badges)
 #### Changed
 - Added `display: inline-flex` and `align-items: center` to badge to center content vertically
@@ -259,6 +269,10 @@
 #### Fixed
 - The popout indicator icon now positions itself correctly in the right-to-left context.
 <!-- ## [VERSION] -->
+
+### [KineticButton](https://www.lightningdesignsystem.com/components/kinetic-button)
+#### Changed
+- Added `display: inline-flex` and `align-items: center` to kinetic-button to center content vertically
 
 ### [List Builder](https://www.lightningdesignsystem.com/components/list-builder)
 #### Changed
@@ -700,6 +714,13 @@
 ## Release 2.8.0 - January 4, 2019
 
 ## Components
+### [AKineticsComponent](https://www.lightningdesignsystem.com/components/a-kinetics-component)
+#### Added
+- Examples for all color variants with left and right aligned placement.
+- Wrapping `slds-a-kinetics-component__icon` element to position and color icons.
+#### Changed
+- Increased font size to 12px, applied bold font weight, and removed uppercase styling in `.slds-a-kinetics-component`.
+
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Changed
 - Updated Accordion title to respond to user's densification settings.
@@ -810,6 +831,13 @@
 ### [Input](https://www.lightningdesignsystem.com/components/input)
 #### Fixed
 - Resolved issue where `slds-input__icon_left` and `.slds-input__icon` elements were positioned over labels when in horizontal form elements
+
+### [KineticButton](https://www.lightningdesignsystem.com/components/kinetic-button)
+#### Added
+- Examples for all color variants with left and right aligned placement.
+- Wrapping `slds-button_kinetic__icon` element to position and color icons.
+#### Changed
+- Increased font size to 12px, applied bold font weight, and removed uppercase styling in `.slds-button_kinetic`.
 
 ### [Menus](https://www.lightningdesignsystem.com/components/menus)
 #### Added
@@ -975,6 +1003,10 @@
 - Added [variable spacing tokens](https://lightningdesignsystem.com/design-tokens/#category-spacing) to support new Densification settings
 
 ## Components
+### [AKineticsComponent](https://www.lightningdesignsystem.com/components/a-kinetics-component)
+#### Fixed
+- Nested `inline` and `inline-block` elements now receive the proper vertical alignment.
+
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Removed
 - Removed hard coded text sizing utility class, `slds-text-heading_small`, from the `slds-accordion__summary-heading` element.
@@ -1150,6 +1182,10 @@
 ### [Illustration](https://www.lightningdesignsystem.com/components/illustration)
 #### Added
 - Added example for large illustrations
+
+### [KineticButton](https://www.lightningdesignsystem.com/components/kinetic-button)
+#### Fixed
+- Nested `inline` and `inline-block` elements now receive the proper vertical alignment.
 
 ### [List Builder](https://www.lightningdesignsystem.com/components/list-builder)
 #### Added

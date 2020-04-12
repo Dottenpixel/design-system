@@ -2,106 +2,43 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import {
-  KineticButton,
-  InverseKineticButton,
-  LightestKineticButton,
-  KineticButtonIcon
-} from '..';
+import { Button } from '../../buttons/base/example';
 
-export default <KineticButton>KineticButton Label</KineticButton>;
+export default <div>Nothing to see here</div>;
 
 export let examples = [
   {
-    id: 'inverse',
-    label: 'Inverse',
-    element: <InverseKineticButton>Inverse kinetic-button</InverseKineticButton>
-  },
-  {
-    id: 'with-left-icon',
-    label: 'With left icon',
+    id: 'kinetic-button',
+    label: 'Kinetic Button',
+    demoStyles: 'text-align: center;',
     element: (
-      <KineticButton>
-        <KineticButtonIcon symbol="moneybag" />
-        423 Credits Available
-      </KineticButton>
+      <Button isNeutral isKinetic>
+        <svg class="slds-kinetic-border-swirl">
+          <defs>
+            <linearGradient
+              id="slds-button_kinetic-gradient"
+              x1="0%"
+              y1="75%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop class="slds-kinetic-gradient__stop-1" offset="0%" />
+              <stop class="slds-kinetic-gradient__stop-2" offset="100%" />
+            </linearGradient>
+          </defs>
+          <rect
+            class="slds-kinetic-border-swirl-shape"
+            x="0"
+            y="0"
+            rx="4"
+            ry="4"
+            fill="none"
+            width="100%"
+            height="100%"
+          />
+        </svg>
+        <span class="slds-button_kinetic_label">I have KINETICS!</span>
+      </Button>
     )
-  },
-  {
-    id: 'with-right-icon',
-    label: 'With right icon',
-    element: (
-      <KineticButton>
-        423 Credits Available
-        <KineticButtonIcon symbol="moneybag" align="right" />
-      </KineticButton>
-    )
-  },
-  {
-    id: 'light-with-left-icon',
-    label: 'Light with left icon',
-    element: (
-      <LightestKineticButton>
-        <KineticButtonIcon symbol="moneybag" />
-        423 Credits Available
-      </LightestKineticButton>
-    )
-  },
-  {
-    id: 'light-with-right-icon',
-    label: 'Light with right icon',
-    element: (
-      <LightestKineticButton>
-        423 Credits Available
-        <KineticButtonIcon symbol="moneybag" align="right" />
-      </LightestKineticButton>
-    )
-  },
-  {
-    id: 'inverse-with-left-icon',
-    label: 'Inverse with left icon',
-    element: (
-      <InverseKineticButton>
-        <KineticButtonIcon symbol="moneybag" isInverse />
-        423 Credits Available
-      </InverseKineticButton>
-    )
-  },
-  {
-    id: 'inverse-with-right-icon',
-    label: 'Inverse with right icon',
-    element: (
-      <InverseKineticButton>
-        423 Credits Available
-        <KineticButtonIcon symbol="moneybag" align="right" isInverse />
-      </InverseKineticButton>
-    )
-  },
-  {
-    id: 'kinetic-button-with-child',
-    label: 'With Child Element',
-    element: (
-      <KineticButton>
-        Component In: <em>Lightning</em>
-      </KineticButton>
-    )
-  }
-];
-
-export let states = [
-  {
-    id: 'success',
-    label: 'Success',
-    element: <KineticButton isSuccess>Success kinetic-button</KineticButton>
-  },
-  {
-    id: 'warning',
-    label: 'Warning',
-    element: <KineticButton isWarning>Warning kinetic-button</KineticButton>
-  },
-  {
-    id: 'error',
-    label: 'Error',
-    element: <KineticButton isError>Error kinetic-button</KineticButton>
   }
 ];

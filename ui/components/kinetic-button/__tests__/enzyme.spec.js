@@ -42,14 +42,14 @@ describe('light kinetic-button with icon', () => {
       <KineticButtonIcon symbol="moneybag" />
       423 Credits Available
     </KineticButton>
-  ).find('.slds-kinetic-button');
+  ).find('.slds-button_kinetic');
 
   it('renders a light kinetic-button', () => {
-    expect(wrapper.hasClass('slds-kinetic-button_lightest')).toEqual(true);
+    expect(wrapper.hasClass('slds-button_kinetic_lightest')).toEqual(true);
   });
 
   it('renders a light kinetic-button with icon on the left', () => {
-    expect(wrapper.childAt(0).exists('.slds-kinetic-button__icon')).toEqual(
+    expect(wrapper.childAt(0).exists('.slds-button_kinetic__icon')).toEqual(
       true
     );
   });
@@ -57,7 +57,7 @@ describe('light kinetic-button with icon', () => {
   it('renders an icon container', () => {
     expect(
       wrapper
-        .find('.slds-kinetic-button__icon')
+        .find('.slds-button_kinetic__icon')
         .childAt(0)
         .exists('.slds-icon_container')
     ).toEqual(true);
@@ -66,7 +66,7 @@ describe('light kinetic-button with icon', () => {
   it('renders an svg in the icon', () => {
     expect(
       wrapper
-        .find('.slds-kinetic-button__icon .slds-icon_container')
+        .find('.slds-button_kinetic__icon .slds-icon_container')
         .childAt(0)
         .exists('svg.slds-icon')
     ).toEqual(true);
@@ -79,25 +79,25 @@ describe('inverse kinetic-button with right icon', () => {
       423 Credits Available
       <KineticButtonIcon symbol="moneybag" isInverse align="right" />
     </InverseKineticButton>
-  ).find('.slds-kinetic-button');
+  ).find('.slds-button_kinetic');
 
   it('renders an inverse kinetic-button', () => {
-    expect(wrapper.hasClass('slds-kinetic-button_inverse')).toEqual(true);
+    expect(wrapper.hasClass('slds-button_kinetic_inverse')).toEqual(true);
   });
 
   it('renders an inverse icon', () => {
     expect(
       wrapper
-        .find('.slds-kinetic-button__icon')
-        .hasClass('slds-kinetic-button__icon_inverse')
+        .find('.slds-button_kinetic__icon')
+        .hasClass('slds-button_kinetic__icon_inverse')
     ).toEqual(true);
   });
 
   it('renders an icon on the right', () => {
     expect(
       wrapper
-        .find('.slds-kinetic-button__icon')
-        .hasClass('slds-kinetic-button__icon_right')
+        .find('.slds-button_kinetic__icon')
+        .hasClass('slds-button_kinetic__icon_right')
     ).toEqual(true);
   });
 });

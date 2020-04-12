@@ -5,9 +5,9 @@ import { UtilityIcon } from '../icons/base/example';
 
 export const KineticButton = props => (
   <span
-    className={classNames('slds-kinetic-button', {
-      'slds-kinetic-button_inverse': props.isInverse,
-      'slds-kinetic-button_lightest': props.isLightest,
+    className={classNames('slds-button_kinetic', {
+      'slds-button_kinetic_inverse': props.isInverse,
+      'slds-button_kinetic_lightest': props.isLightest,
       'slds-theme_success': props.isSuccess,
       'slds-theme_warning': props.isWarning,
       'slds-theme_error': props.isError
@@ -44,10 +44,10 @@ export const KineticButtonIcon = props => {
   return (
     <span
       className={classNames(
-        'slds-kinetic-button__icon',
-        `slds-kinetic-button__icon_${align}`,
+        'slds-button_kinetic__icon',
+        `slds-button_kinetic__icon_${align}`,
         {
-          'slds-kinetic-button__icon_inverse': isInverse
+          'slds-button_kinetic__icon_inverse': isInverse
         }
       )}
     >
