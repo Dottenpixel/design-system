@@ -1,0 +1,101 @@
+import { Fragment } from 'react';
+import Example from '../../../shared/components/Example';
+import CodeView from '../../../shared/components/CodeView';
+import DisplayColumn from '../../../shared/components/DisplayColumn';
+import DisplayGrid from '../../../shared/components/DisplayGrid';
+import { UtilityIcon } from '../icons/base/example';
+import * as Base from './base/example';
+import { InverseKineticButton, LightestKineticButton, KineticButton, KineticButtonIcon } from './index';
+import { getDisplayElementById } from '../../shared/helpers';
+
+<div className="doc lead">
+  KineticButton are labels which hold small amounts of information.
+</div>
+
+<CodeView exampleOnly>
+  {Base.default}
+</CodeView>
+
+## About KineticButton
+
+KineticButton are composed of text inside a `span` element and may include inline/inline-block elements and/or icons.
+
+### Colors
+
+There are six different color kinetic-button you can use.
+
+| KineticButton | class | description |
+| ----- | ----- | ----------- |
+| <KineticButton key="1">Default KineticButton</KineticButton>| `.slds-kinetic-button`| This is the default kinetic-button. You probably want to use this one unless you fall into a specific use-case.|
+| <InverseKineticButton key="2">Darker KineticButton</InverseKineticButton>| `.slds-kinetic-button_inverse`| This kinetic-button is used when you need higher contrast than our default kinetic-button.|
+| <LightestKineticButton key="3">Lightest KineticButton</LightestKineticButton>| `.slds-kinetic-button_lightest`| This kinetic-button is used when you need higher contrast, such as on colored backgrounds.|
+| <KineticButton key="4" isSuccess>Success KineticButton</KineticButton>| `.slds-kinetic-button .slds-theme_success`| This is a kinetic-button used to communicate success.|
+| <KineticButton key="5" isWarning>Warning KineticButton</KineticButton>| `.slds-kinetic-button .slds-theme_warning`| This is a kinetic-button used to communicate a warning.|
+| <KineticButton key="6" isError>Error KineticButton</KineticButton>| `.slds-kinetic-button .slds-theme_error`| This is a kinetic-button used to communicate an error.|
+
+## Base
+
+<CodeView toggleCode={false}>
+  {Base.default}
+</CodeView>
+
+## KineticButton with Icons
+
+You can include an icon in your kinetic-button. For maximum visual clarity, [Utility icons](/icons/#utility) are the suggested icon type inside kinetic-button. You may also choose to put an icon in a kinetic-button without text, but in that case, be sure to include assistive text.
+
+The icon can be aligned to the left or right side of the text. To use an icon, wrap the icon with `<span class="slds-kinetic-button__icon">`. Add the classes `slds-kinetic-button__icon_left` or `slds-kinetic-button__icon_right` to the wrapper for spacing the icon in relation to the text label.
+
+<DisplayGrid>
+  <DisplayColumn>
+    <strong>Base: Icon on the left</strong>
+    <CodeView>
+      {getDisplayElementById(Base.examples, 'with-left-icon')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Base: Icon on the right</strong>
+    <CodeView>
+      {getDisplayElementById(Base.examples, 'with-right-icon')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <CodeView>
+      {getDisplayElementById(Base.examples, 'light-with-left-icon')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <CodeView>
+      {getDisplayElementById(Base.examples, 'light-with-right-icon')}
+    </CodeView>
+  </DisplayColumn>
+</DisplayGrid>
+
+When using inverse themed kinetic-button, add the `slds-kinetic-button__icon_inverse` class to `slds-kinetic-button__icon` to inverse the icon.
+
+<DisplayGrid>
+  <DisplayColumn>
+    <strong>Icon on the left</strong>
+    <CodeView>
+      {getDisplayElementById(Base.examples, 'inverse-with-left-icon')}
+    </CodeView>
+  </DisplayColumn>
+  <DisplayColumn>
+    <strong>Icon on the right</strong>
+    <CodeView>
+      {getDisplayElementById(Base.examples, 'inverse-with-right-icon')}
+    </CodeView>
+  </DisplayColumn>
+</DisplayGrid>
+
+
+## KineticButton with Nested Elements
+
+Along with icons, you can have nested textual elements, such as `strong`, `em`, and `span` elements, within a kinetic-button. Only `inline` and `inline-block` elements are supported at this time.
+
+<Example title="KineticButton with nested element">
+  <CodeView toggleCode={false}>
+    <KineticButton>
+      Component In: <em>Lightning</em>
+    </KineticButton>
+  </CodeView>
+</Example>

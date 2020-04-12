@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KineticButton colors renders a default kinetic-button 1`] = `
+<span
+  className="slds-kinetic-button"
+>
+  Lovely kinetic-button
+</span>
+`;
+
+exports[`KineticButton colors renders an inverse kinetic-button 1`] = `
+<span
+  className="slds-kinetic-button slds-kinetic-button_inverse"
+>
+  Lovely kinetic-button
+</span>
+`;
+
+exports[`KineticButton colors renders kinetic-button 1`] = `
+<span
+  className="slds-kinetic-button slds-kinetic-button_lightest"
+>
+  Light
+</span>
+`;
+
+exports[`KineticButton with icons renders kinetic-button with icon only 1`] = `
+<span
+  className="slds-kinetic-button slds-kinetic-button_lightest"
+>
+  <span
+    className="slds-kinetic-button__icon slds-kinetic-button__icon_left"
+  >
+    <span
+      className="slds-icon_container slds-icon-utility-world slds-current-color"
+      title="Description of icon when needed"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_xx-small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#world"
+        />
+      </svg>
+      <span
+        className="slds-assistive-text"
+      >
+        assistive text goes here, do it!
+      </span>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`KineticButton with icons renders kinetic-button with left icon 1`] = `
+<span
+  className="slds-kinetic-button slds-kinetic-button_lightest"
+>
+  <span
+    className="slds-kinetic-button__icon slds-kinetic-button__icon_left"
+  >
+    <span
+      className="slds-icon_container slds-icon-utility-world slds-current-color"
+      title="Description of icon when needed"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_xx-small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#world"
+        />
+      </svg>
+    </span>
+  </span>
+  Icon on the left
+</span>
+`;
+
+exports[`KineticButton with icons renders kinetic-button with right icon 1`] = `
+<span
+  className="slds-kinetic-button slds-kinetic-button_lightest"
+>
+  Icon on the right
+  <span
+    className="slds-kinetic-button__icon slds-kinetic-button__icon_left"
+  >
+    <span
+      className="slds-icon_container slds-icon-utility-world slds-current-color"
+      title="Description of icon when needed"
+    >
+      <svg
+        aria-hidden={true}
+        className="slds-icon slds-icon_xx-small"
+      >
+        <use
+          xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#world"
+        />
+      </svg>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`KineticButton with icons renders deprecated kinetic-button with icon only 1`] = `
+<span
+  className="slds-kinetic-button slds-kinetic-button_lightest"
+>
+  <span
+    className="slds-icon_container slds-icon-utility-world"
+    title="Description of icon when needed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon_xx-small slds-icon-text-default"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#world"
+      />
+    </svg>
+    <span
+      className="slds-assistive-text"
+    >
+      assistive text goes here, do it!
+    </span>
+  </span>
+</span>
+`;
+
+exports[`KineticButton with icons renders deprecated kinetic-button with right icon 1`] = `
+<span
+  className="slds-kinetic-button slds-kinetic-button_lightest"
+>
+  Icon on the right
+  <span
+    className="slds-icon_container slds-icon-utility-world slds-m-left_xx-small"
+    title="Description of icon when needed"
+  >
+    <svg
+      aria-hidden={true}
+      className="slds-icon slds-icon_xx-small slds-icon-text-default"
+    >
+      <use
+        xlinkHref="/assets/icons/utility-sprite/svg/symbols.svg#world"
+      />
+    </svg>
+  </span>
+</span>
+`;
