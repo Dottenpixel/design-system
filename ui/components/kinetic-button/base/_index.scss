@@ -128,3 +128,22 @@ $stop-color-2: #0070d2;
       stroke-dasharray $duration $bezier-curve;
   }
 }
+
+.slds-kinetic-progress__item {
+  --border-swirl-stop-color-1: #{$stop-color-2};
+  --border-swirl-stop-color-2: #{$stop-color-1};
+  --border-swirl-gradient-url: url(#slds-kinetic-progress-stop-gradient);
+  --border-swirl-height: 200%;
+  --border-swirl-width: 200%;
+  --border-swirl-top: -8px;
+  --border-swirl-left: -8px;
+
+  position: relative;
+  outline: none;
+
+  .slds-kinetic-border-swirl {
+    z-index: 100;
+    // border-radius: 50%;
+    transform: rotate(-180deg);
+  }
+}

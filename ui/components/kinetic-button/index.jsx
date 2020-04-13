@@ -3,6 +3,41 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { UtilityIcon } from '../icons/base/example';
 
+export const KineticsBorderSwirl = ({ gradientId, shape }) => (
+  <svg class="slds-kinetic-border-swirl">
+    <defs>
+      <linearGradient id={gradientId} x1="0%" y1="75%" x2="100%" y2="100%">
+        <stop class="slds-kinetic-gradient__stop-1" offset="0%" />
+        <stop class="slds-kinetic-gradient__stop-2" offset="100%" />
+      </linearGradient>
+    </defs>
+    {shape === 'circle' ? (
+      <rect
+        class="slds-kinetic-border-swirl-shape"
+        x="0"
+        y="0"
+        rx="4"
+        ry="4"
+        fill="none"
+        width="100%"
+        height="100%"
+      />
+    ) : (
+      <circle
+        class="slds-kinetic-border-swirl-shape"
+        cx="50%"
+        cy="50%"
+        r="40%"
+        fill="none"
+        width="100%"
+        height="100%"
+      />
+    )}
+  </svg>
+);
+
+KineticsBorderSwirl.propTypes = {};
+
 export const KineticButton = props => (
   <span
     className={classNames('slds-button_kinetic', {

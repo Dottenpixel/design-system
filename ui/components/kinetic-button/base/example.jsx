@@ -2,43 +2,39 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
+import { KineticsBorderSwirl } from '..';
 import { Button } from '../../buttons/base/example';
+import { Progress, Step } from '../../progress-indicator/base/example';
 
 export default <div>Nothing to see here</div>;
 
 export let examples = [
   {
-    id: 'kinetic-button',
-    label: 'Kinetic Button',
+    id: 'border-swirl-button',
+    label: 'Border Swirl Button',
     demoStyles: 'text-align: center;',
     element: (
       <Button isNeutral isKinetic>
-        <svg class="slds-kinetic-border-swirl">
-          <defs>
-            <linearGradient
-              id="slds-button_kinetic-gradient"
-              x1="0%"
-              y1="75%"
-              x2="100%"
-              y2="100%"
-            >
-              <stop class="slds-kinetic-gradient__stop-1" offset="0%" />
-              <stop class="slds-kinetic-gradient__stop-2" offset="100%" />
-            </linearGradient>
-          </defs>
-          <rect
-            class="slds-kinetic-border-swirl-shape"
-            x="0"
-            y="0"
-            rx="4"
-            ry="4"
-            fill="none"
-            width="100%"
-            height="100%"
-          />
-        </svg>
+        <KineticsBorderSwirl gradientId="slds-button_kinetic-gradient" />
         <span class="slds-button_kinetic_label">I have KINETICS!</span>
       </Button>
+    )
+  },
+  {
+    id: 'border-swirl-progress-indicator',
+    label: 'Border Swirl Progress Indicator',
+    element: (
+      <div className="demo-only" style={{ padding: '1rem' }}>
+        <Progress value="50">
+          <Step done>Step 1</Step>
+          <Step done>Step 2</Step>
+          <Step active isKinetic>
+            Step 3
+          </Step>
+          <Step>Step 4</Step>
+          <Step>Step 5</Step>
+        </Progress>
+      </div>
     )
   }
 ];

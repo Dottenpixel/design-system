@@ -1,7 +1,7 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import classNames from 'classnames';
 import ButtonIcon from '../../button-icons/';
 import { Tooltip } from '../../tooltips/base/example';
@@ -12,53 +12,76 @@ import {
   ModalFooter
 } from '../../modals/base/example';
 import { ProgressBar } from '../../progress-bar';
+import { KineticsBorderSwirl } from '../../kinetic-button/index';
 
 /// ///////////////////////////////////////////
 // Partial(s)
 /// ///////////////////////////////////////////
 
-export let Progress = props => (
-  <div className={classNames('slds-progress', props.className)}>
-    <ol className="slds-progress__list">{props.children}</ol>
+export let Progress = ({
+  className,
+  children,
+  active,
+  done,
+  error,
+  ...props
+}) => (
+  <div className={classNames('slds-progress', className)}>
+    <ol className="slds-progress__list">{children}</ol>
     <ProgressBar className="slds-progress-bar_x-small" value={props.value} />
   </div>
 );
 
-export let Step = props => (
+export let Step = ({
+  className,
+  children,
+  active,
+  done,
+  error,
+  isKinetic,
+  ...props
+}) => (
   <li
     className={classNames(
       'slds-progress__item',
-      props.className,
-      props.active ? 'slds-is-active' : null,
-      props.done ? 'slds-is-completed' : null,
-      props.error ? 'slds-has-error' : null
+      className,
+      isKinetic &&
+        'slds-kinetic-progress__item slds-kinetic-progress__item_activated',
+      active && 'slds-is-active',
+      done && 'slds-is-completed',
+      error && 'slds-has-error'
     )}
   >
-    {props.done && !props.error ? (
+    {done && !error ? (
       <ButtonIcon
         className="slds-progress__marker slds-progress__marker_icon"
         symbol="success"
         aria-describedby={props['aria-describedby']}
-        assistiveText={props.done ? props.children + ' - Completed' : null}
-        title={props.done ? props.children + ' - Completed' : null}
+        assistiveText={done ? children + ' - Completed' : null}
+        title={done ? children + ' - Completed' : null}
       />
-    ) : props.error ? (
+    ) : error ? (
       <ButtonIcon
         className="slds-progress__marker slds-progress__marker_icon"
         symbol="error"
         aria-describedby={props['aria-describedby']}
-        assistiveText={props.error ? props.children + ' - Error' : null}
-        title={props.error ? props.children + ' - Error' : null}
+        assistiveText={error ? children + ' - Error' : null}
+        title={error ? children + ' - Error' : null}
       />
     ) : (
-      <button
-        className="slds-button slds-progress__marker"
-        aria-describedby={props['aria-describedby']}
-      >
-        <span className="slds-assistive-text">
-          {props.children} {props.active ? '- Active' : null}
-        </span>
-      </button>
+      <Fragment>
+        {isKinetic && (
+          <KineticsBorderSwirl gradientId="slds-kinetic-progress-stop-gradient" />
+        )}
+        <button
+          className="slds-button slds-progress__marker"
+          aria-describedby={props['aria-describedby']}
+        >
+          <span className="slds-assistive-text">
+            {children} {active ? '- Active' : null}
+          </span>
+        </button>
+      </Fragment>
     )}
   </li>
 );
